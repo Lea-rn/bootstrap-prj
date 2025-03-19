@@ -2,4 +2,31 @@
     margin-right: 30px;
     font-size: 35px;
 }
+ 
+.sidebar {
+    width: 280px;
+    transition: 1s;
+}
 
+.small-sidebar{
+    width: 90px;
+    transition: 1s;
+}
+
+.small-sidebar .sidebar-text {
+    display: none;
+}
+
+
+/* logo */
+
+.bi-lightning-charge-fill {
+    transform: rotateY(360deg);
+    transition: 1s;
+}
+
+.small-sidebar .bi-lightning-charge-fill::before {
+    content: "\F46D";
+    transform: rotateY(360deg);
+    transition: 1s;
+}

@@ -252,26 +252,33 @@
     </svg>
 
     <main class="d-flex flex-nowrap">
+
+
+
+
       <!-- //// sidebar ::  -->
       <div
-        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-        style="width: 280px"
+        class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar "
+      
+        id="sidebarId"
+   
+
       >
         <a
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
         <i class="bi bi-lightning-charge-fill logo-sidebar"></i>
-          <span class="fs-4">YOUR BRAND</span>
+          <span class="fs-4 sidebar-text">YOUR BRAND</span>
         </a>
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="./index.html" class="nav-link active" aria-current="page">
+            <a href="./index.html" class="nav-link active " aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16">
                 <use xlink:href="#home" />
               </svg>
-              Home
+            <span class="sidebar-text">Home</span>
             </a>
           </li>
      
@@ -282,7 +289,7 @@
               <svg class="bi pe-none me-2" width="16" height="16">
                 <use xlink:href="#people-circle" />
               </svg>
-              Add User
+              <span class="sidebar-text">Add User</span>
             </a>
           </li>
         </ul>
@@ -301,7 +308,7 @@
               height="32"
               class="rounded-circle me-2"
             />
-            <strong>foulen</strong>
+            <strong class="sidebar-text" >foulen</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -319,7 +326,7 @@
     <!-- /// navbar ///// :::  -->
     <nav class="navbar bg-body-tertiary mb-5">
       <div class="container-fluid  flex-column flex-md-row ">
-        <a class="navbar-brand">Welcome</a>
+        <a class="navbar-brand"> <i onclick="toggleSidebar()" class="bi bi-x-circle"></i>  Welcome</a>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -365,5 +372,11 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
 
     <script src="./js/sidebars.js"></script>
+
+    <script>
+   const toggleSidebar = ()=>{
+    sidebarId.classList.toggle("small-sidebar")
+   }
+    </script>
   </body>
 </html>
